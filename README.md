@@ -1,4 +1,4 @@
-Vue.js/Sass Projekty
+# Vue.js/Sass Projekty
 
 Tento repozitář obsahuje jednoduché Vue.js projekty vytvořené s HTML, CSS (Sass) a Vue.js.
 
