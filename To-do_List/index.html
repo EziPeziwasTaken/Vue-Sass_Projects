@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cs">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app" class="container">
+        <h2>To-Do List</h2>
+        <input v-model="newTask" @keyup.enter="addTask" placeholder="Přidat úkol">
+        <ul>
+            <li v-for="(task, index) in tasks" :key="index">
+                <span :class="{ done: task.completed }" @click="toggleTask(index)">
+                    {{ task.text }}
+                </span>
+                <button @click="removeTask(index)">X</button>
+            </li>
+        </ul>
+    </div>
+    <script src="index.vue"></script>
+
+</body>
+</html>

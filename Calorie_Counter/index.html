@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Počítadlo Kalorií</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app" class="container">
+        <h2>Počítadlo Kalorií</h2>
+        <input v-model="newFood" placeholder="Název jídla">
+        <input v-model.number="newCalories" type="number" placeholder="Kalorie">
+        <button @click="addFood">Přidat</button>
+        
+        <ul>
+            <li v-for="(food, index) in foods" :key="index">
+                {{ food.name }} - {{ food.calories }} kcal
+                <button @click="removeFood(index)">X</button>
+            </li>
+        </ul>
+        <h3>Celkové kalorie: {{ totalCalories }} kcal</h3>
+    </div>
+
+    <script src="index.vue"></script>
+</body>
+</html>

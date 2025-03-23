@@ -1,0 +1,87 @@
+$primary-color: #4CAF50;
+$secondary-color: #f4f4f4;
+$text-color: #333;
+$danger-color: #ff4d4d;
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $secondary-color;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+}
+
+h2 {
+    color: $primary-color;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: 0.3s;
+
+    &:focus {
+        border-color: darken($primary-color, 10%);
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: lighten($primary-color, 40%);
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    &:hover {
+        background: lighten($primary-color, 30%);
+    }
+
+    span {
+        cursor: pointer;
+        transition: 0.3s;
+
+        &.done {
+            text-decoration: line-through;
+            color: $text-color;
+            opacity: 0.6;
+        }
+    }
+
+    button {
+        background: $danger-color;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background: darken($danger-color, 10%);
+        }
+    }
+}
